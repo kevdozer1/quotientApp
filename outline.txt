@@ -1,0 +1,28 @@
+I am looking to make a simple iOS app with React Native called Quotient about productivity and gamifying personal progress and tasks. Here is the general idea of the app. 
+
+I want a user to be able to create modifiable segments called Tasks. The object of the app is that a user has a list of Tasks, referred to as the Taskbar, and their personal progress statistic, referred to as the Satisfaction Quotient, which is measured by how many of their Tasks they have completed divided by their total number of Tasks. 
+
+The app should display each Task in a scrollable list(the aforementioned Taskbar,) and the user should be able to click on a Task to edit its properties. Each Task in the Taskbar will pretty much be like a button. Here are the properties of a Task:
+Name: this is the name of the task. This is viewable from the Taskbar. 
+Description: this is a small, optional description that describes the task. This is not viewable from the Taskbar and can only be seen when the Task is clicked
+Color: this is the hexadecimal color of the button in the list that represents this Task. The default should be gray
+Category: This is an optional variable that stores an emoji. This emoji refers to an overarching category that several tasks can belong to.
+Streak: this is a boolean that refers to whether this task supports Streaks or not. The default should be False. If a Task has Streaks enabled, the border of the Task button(not the fill color of the button, which is referred to by the Color property) should be red. I will describe the nature of Streaks later
+streakCount: this number refers to how many days a Task with Streaks enabled has been completed in a row. For Tasks without Streaks, this variable is -1. This variable cannot be edited by the user.
+Completed: This refers to whether the Task has been completed. If this variable is True, the Task should display a checkmark emoji and the Color variable should be set to green
+Completion Date: This refers to the date in which this task was completed. For Tasks with Streaks enabled, this stores the previous 7 dates in which that Task was completed. This variable cannot be edited by the user.
+Blinking: If this variable is true, the Task should be slowly, repeatedly pulsating in the Taskbar from black to its set Color
+
+The Completed variable should be able to be toggled True or False by swiping right on the Task button in the Taskbar. The Blinking variable should be able to be toggled True or False similarly by swiping Left.
+
+Streaks:
+Tasks with Streaks enabled represent daily habitual activities that the user wants to complete multiple times. As such, a Task with Streaks will have its completion reset everyday at 1 AM. If a Task with Streaks is completed multiple days in a row, that streakCount variable should be shown in the Taskbar on that Task’s button with a text box in the top right of the button that says “[fire emoji] x streakCount“ and if the user misses the 
+
+Here is the order in which Tasks should be shown in the Taskbar:
+Tasks with Streaks enabled should be shown first
+Tasks with a set Category, and all Tasks of a certain Category should be listed next to each other
+The rest of the Tasks
+
+At the top of the app, above the Taskbar, should be a small area about half the height of the screen where the Satisfaction Quotient is shown. The Satisfaction Quotient should be shown by a circular progress ring that fills up according to how many Tasks you have completed out of your total number of Tasks. The fill color of the progress ring should gradually shift from blue to green as the percentage goes up, this is called the Quotient Color. In the middle of this progress ring, that percentage of your Tasks completed divided by your total number of Tasks should be centered and printed.
+
+The app should have a small banner that stays at the top of your screen that has a plus button on the rightmost side that can create a new Task instance and put it at the bottom of the list. The bottom border of the banner should be set to the Quotient Color.
