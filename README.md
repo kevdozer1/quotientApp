@@ -1,4 +1,4 @@
-# Quotient
+# Quotient 
 
 Quotient is a productivity-enhancing iOS application built with React Native. The purpose of the app is to gamify personal progress by enabling users to create, modify and track tasks, aiming to improve their productivity habits.
 
