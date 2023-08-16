@@ -13,3 +13,5 @@ Quotient enables users to:
 - View their productivity progress, denoted as "Satisfaction Quotient", in a visually appealing circular progress ring that displays the percentage of completed tasks.
 
 Tasks can optionally support "Streaks" which are useful for tracking habitual activities. Tasks with Streaks are reset daily and if completed multiple days in a row, the streak count is prominently displayed. Additionally, tasks can be categorized with an associated emoji, and tasks in the same category are listed together.
+
+![](https://github.com/kevdozer1/quotientApp/blob/main/quotientgif.gif)
